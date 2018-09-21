@@ -17,6 +17,7 @@ import List from './components/List.jsx';
 import Bye from './components/Bye.jsx';
 import Help from './components/Help.jsx';
 import Page404 from './components/404.jsx';
+import About from './components/About.jsx';
 
 const appElement = document.getElementById('app');
 const appVersion = appElement.getAttribute('data-app-version');
@@ -46,6 +47,7 @@ ReactDOM.render(
       <Route path='/app' component={() => <App key={Date.now()} version={appVersion} controller={controller} />} />
       <Route path='/list' component={List} />
       <Route path='/help' component={Help} />
+      <Route path='/about' component={About} />
       <Route exact path='/' component={Home} />
       <Route exact path='/404' component={Page404} />
       <Route exact path='/bye' component={Bye} />
